@@ -11,7 +11,7 @@ describe "User can find alternative fuel stations" do
     
     within(".closest_stations") do
       expect(stations.count).to eq(10)
-      expect(station.first.type).to eq(10)
+      expect(station.first.type).to eq("ELEC" || "")
     end
   end
 end
