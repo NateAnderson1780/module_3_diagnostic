@@ -1,7 +1,6 @@
 class SearchController < ApplicationController
   def index
-    byebug
-    @stations = NrelService.find_fuel_stations(params[:q])
+    @stations = NrelService.new(params[:q]).find_fuel_stations
   end
 end
 
